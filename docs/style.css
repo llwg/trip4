@@ -1,0 +1,96 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.66;
+}
+ol, ul {
+	padding-left: 2rem;
+}
+ol { list-style: decimal }
+ul { list-style: circle }
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*****/
+
+pre, code { font-family: monospace }
+
+strong { font-weight: bold }
+em { font-style: italic }
+
+h1 { font-size: 2.2rem }
+h2 { font-size: 1.6rem; text-decoration: underline}
+section h1 { font-size: 1.6rem; text-decoration: underline }
+h3 { font-size: 1.5rem}
+h4 { font-size: 1.2rem}
+
+figure, section, p { margin: 1rem 0 1rem 0 }
+
+.breadcrumb { position: sticky; top: 0; background: white }
+/* h2 { position: sticky; top: 0; background: white} */
+
+img, video { max-width: 100% }
+figure { padding: 0 1rem 0 1rem }
+
+figcaption { font-style: italic }
+
+section { background-color: lightgreen; padding: 0.5rem }
+.drop-caps { font-size: 1.8rem; text-transform: uppercase; float: left}
+
+body { margin: 0.6rem; padding: 1rem; font-family: 'Georgia'; text-align: justify }
+
+blockquote { margin-left: 1rem; padding-left: 1rem; border-left: 1px solid gray }
+
+td, th { border: solid 1px }
+
+@media (min-width: 42rem) {
+	html { display: flex; justify-content: center }
+	body { width: 36rem }
+}
+
+@media (prefers-color-scheme: dark) {
+	html { background-color: #000 }
+	body { background-color: #222; color: #eee}
+	a { color: #ec9f19}
+	.breadcrumb { background-color: black }
+	section { background-color: #040 }
+}
