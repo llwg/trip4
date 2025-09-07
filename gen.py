@@ -177,7 +177,7 @@ def process_page(filename): # -> html content
 
 	title = h1s[0]['c'][2] # [Inline]
 
-	html = '<link rel=stylesheet href=style.css />' + pandocjson2html(j)
+	html = '<!DOCTYPE html><link rel=stylesheet href=style.css /><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />' + pandocjson2html(j)
 
 	return Page(title, asides, images, html)
 
@@ -233,6 +233,6 @@ if args.convert_photo_script:
 
 index_j = pandoc_htmlfile2json('markdown/index.md')
 index_j['blocks'] = list(flat(postmap_pandoc(map_index)(blk) for blk in index_j['blocks']))
-index_html = '<link rel=stylesheet href=style.css />' + pandocjson2html(index_j)
+index_html = '<!DOCTYPE html><link rel=stylesheet href=style.css /><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />' + pandocjson2html(index_j)
 
 open("docs/index.html", 'w').write(index_html)
