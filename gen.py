@@ -177,7 +177,13 @@ def process_page(filename): # -> html content
 
 	title = h1s[0]['c'][2] # [Inline]
 
-	html = '<!DOCTYPE html><link rel=stylesheet href=style.css /><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />' + pandocjson2html(j)
+	title_html = pandocjson2html(j | {'blocks': [plain(title)]})
+
+	html = f"""<!DOCTYPE html><link rel=stylesheet href=style.css />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<div class=breadcrumb><a href="./index.html">top</a> / <a href="">{title_html}</a></div>
+{pandocjson2html(j)}
+"""
 
 	return Page(title, asides, images, html)
 
